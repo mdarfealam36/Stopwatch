@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Stopwatch"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/chronometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="00 : 00 : 00"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="48dp"
+
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="53dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_stop"
+            style="@style/digitbutton"
+            android:contentDescription="@string/description"
+            app:icon="@drawable/baseline_play"
+            app:backgroundTint="@color/btnBackground2"
+            app:iconSize="26sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clock"
+            style="@style/digitbutton"
+            android:contentDescription="@string/description"
+            app:icon="@drawable/baseline_access_time"
+            app:backgroundTint="@color/btnBackground2"
+            app:iconSize="26sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset"
+            style="@style/digitbutton"
+            android:contentDescription="@string/description"
+            app:icon="@drawable/baseline_refresh"
+            app:backgroundTint="@color/btnBackground2"
+            app:iconSize="26sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_timeLaps"
+            style="@style/digitbutton"
+            android:contentDescription="@string/description"
+            app:icon="@drawable/baseline_timelapse"
+            app:backgroundTint="@color/btnBackground2"
+            app:iconSize="26sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/clockTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="00.00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:text="Run"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

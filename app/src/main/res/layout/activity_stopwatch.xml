@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StopwatchActivity">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="#fff"
+            android:background="@drawable/timer_bg"
+            android:textStyle="bold"
+            android:textSize="58sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="200dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Start"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stopBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Stop"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Reset"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/lapBtn"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Time Lap"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
